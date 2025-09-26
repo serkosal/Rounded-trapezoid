@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Rounded trapezoid</title>
+<style>
+  body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .controls label {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+  }
+</style>
+</head>
+<body>
+
+<div class="controls">
+  <label id="LabelWidth">
+    Width px:
+    <input type="range" id="Width" min="0" max="1000" value="260">
+  </label>
+  <label id="LabelHeight">
+    Height:
+    <input type="range" id="Height" min="0" max="1000" value="300">
+  </label>
+  <label id="LabelDeltaT">
+    trapezoid coefficient:
+    <input type="range" id="DeltaT" min="0" max="5" step="0.01" value="0.5">
+    <p>When: dt = 0 -> Rectangle; dt = 1 -> triangle</p>
+  </label>
+  <label id="LabelRadius">
+    Corners' radius:
+    <input type="range" id="Radius" min="0" max="1000" value="20">
+  </label>
+</div>
+
+<svg width="300" height="300" id="svgTrapezoid">
+  <path fill="orange" d=""></path>
+</svg>
+
+<script src="trapezoid.js"></script>
+
+</body>
+</html>
